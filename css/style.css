@@ -397,6 +397,15 @@ html {
   box-sizing: border-box;
 }
 
+body{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #102746;
+}
+
 *, *::before, ::after{
   box-sizing: inherit;
 }
@@ -404,4 +413,8 @@ html {
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
+}
+
+.header {
+    background-color: #000;
 }
