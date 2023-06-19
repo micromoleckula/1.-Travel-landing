@@ -88,8 +88,8 @@ audio,
 canvas,
 video {
     display: inline-block;
-    display: inline;
-    zoom: 1;
+    *display: inline;
+    *zoom: 1;
     max-width: 100%;
 }
 
@@ -188,7 +188,7 @@ legend {
     border: 0; /* 1 */
     padding: 0;
     white-space: normal; /* 2 */
-    margin-left: -7px; /* 3 */
+    *margin-left: -7px; /* 3 */
 }
 
 /**
@@ -205,7 +205,7 @@ textarea {
     font-size: 100%; /* 1 */
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
-    vertical-align: middle; /* 3 */
+    *vertical-align: middle; /* 3 */
 }
 
 /**
@@ -246,7 +246,7 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button; /* 2 */
     cursor: pointer; /* 3 */
-    overflow: visible;  /* 4 */
+    *overflow: visible;  /* 4 */
 }
 
 /**
@@ -269,8 +269,8 @@ input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
-    height: 13px; /* 3 */
-    width: 13px; /* 3 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
 }
 
 /**
@@ -368,6 +368,7 @@ textarea {
 
 
 
+
 /* lato-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -397,6 +398,7 @@ textarea {
 
 html {
   box-sizing: border-box;
+
 }
 
 body{
@@ -415,6 +417,16 @@ body{
 .wrapper {
     max-width: 1060px;
     margin: 0 auto;
+}
+
+.wrapper-full {
+    max-width: 1262px;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
 }
 
 /*html end*/
@@ -529,9 +541,13 @@ body{
 
 /*Benefits styles starts*/
 
+.benefits {
+    margin-bottom: 131px;
+}
+
 .benefits__wrap {
     max-width: 1262px;
-    background-color: #FFF;
+    background-color: white;
     margin: 0 auto;
     box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
     position: relative;
@@ -555,9 +571,51 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 55px;
+    padding: 0 100px;
 
 }
 
+.benefits__card {
+    grid-column: span 1;
+    margin-bottom: 112px;
+}
+
+.benefits__card-pic {
+    margin-bottom: 37px;
+    max-width: 66px;
+}
+.benefits__card-thumb {
+    display: block;
+}
+
+.benefits__card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 26px;
+}
+
+.benefits__card-desc {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 39px;
+}
+
+.benefits__card-more {
+    display: inline-block;
+    padding-right: 59px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+    background: url(../img/svg/arrow-right-ico.svg)no-repeat 95% center;
+    transition: .2s all;
+}
+
+.benefits__card-more:hover, .benefits__card-more:focus{
+    background: url(../img/svg/arrow-right-ico.svg)no-repeat right center;
+
+}
 /*Benefits styles end*/
 
 
